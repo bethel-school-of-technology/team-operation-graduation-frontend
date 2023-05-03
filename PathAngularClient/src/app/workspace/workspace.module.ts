@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { WorkspaceRoutingModule } from './workspace-routing.module';
 import { WorkspaceComponent } from './workspace.component';
@@ -15,6 +16,7 @@ import { WorkspaceListComponent } from './workspace-list/workspace-list.componen
   ],
   imports: [
     CommonModule,
+    FormsModule,
     WorkspaceRoutingModule
   ]
 })

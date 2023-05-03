@@ -1,46 +1,50 @@
 <body class="p-3 m-0 border-0 bd-example">
-    <body>
-       
-    
-        <!-- Content Area -->
-        <div class="content">
-          <div class="container">
-            <h1>Project List</h1>
-          </div>
-        </div>
-        <!-- End of Content Area -->
-    
-       
+  <div class="content">
+    <div class="container">
+      <h1>Project List</h1>
+    </div>
+  </div>
+  <!-- Content Area -->
+  <div *ngFor="let workspace of workspaceList">
     <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Test Project Title</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn">Resume Project</a>
-            </div>
-          </div>
-        </div>
-        <!-- Example content for sizing-->
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Test Project Title</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn">Resume Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Test Project Title</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn">Resume Project</a>
-            </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{workspace.name}}</h5>
+            <p class="card-text">{{workspace.description}}</p>
+            <a href="#" class="btn">Resume Project</a>
           </div>
         </div>
       </div>
-
-  
-  </body>
+    </div>
+    <!-- End of Content Area -->
+    <!-- <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Test Project Title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="btn">Resume Project</a>
+        </div>
+      </div>
+    </div> -->
+    <!-- Example content for sizing -->
+    <!-- <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Test Project Title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="btn">Resume Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Test Project Title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="btn">Resume Project</a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</body>
