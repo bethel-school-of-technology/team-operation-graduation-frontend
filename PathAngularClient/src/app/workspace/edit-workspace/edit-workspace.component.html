@@ -1,0 +1,12 @@
+<form form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <label>Workspace Name</label>
+        <input type="text" name="name" [(ngModel)]="currentWorkspace.name">
+    </div>
+    <div class="container">
+        <label>Workspace Description</label>
+        <input type="text" name="description" [(ngModel)]="currentWorkspace.description">
+    </div>
+
+    <button class="center" type="submit">Update Workspace</button>
+</form>

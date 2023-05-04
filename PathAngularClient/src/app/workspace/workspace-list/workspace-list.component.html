@@ -12,7 +12,7 @@
           <div class="card-body">
             <h5 class="card-title">{{workspace.name}}</h5>
             <p class="card-text">{{workspace.description}}</p>
-            <a href="#" class="btn">Resume Project</a>
+            <a class="btn" [routerLink]='[workspace.id]'>Resume Project</a>
           </div>
         </div>
       </div>

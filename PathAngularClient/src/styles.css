@@ -1,11 +1,25 @@
 body {
-    background-color: #6D6E80;
-  }
-  .btn{
-    background-color: #E9DCC9;
-    color: white;
-  }
+  background-color: #6D6E80;
+}
 
-  .card{
-    background-color:#C8C8C8;
-  }
+.btn {
+  background-color: #E9DCC9;
+  color: white;
+}
+
+.card{
+  background-color:#C8C8C8;
+}
+
+h1 {
+  text-align: center;
+}
+
+html, body { 
+  height: 100%;
+}
+
+.container {
+  height: 50px;
+  margin: 50px;
+}
