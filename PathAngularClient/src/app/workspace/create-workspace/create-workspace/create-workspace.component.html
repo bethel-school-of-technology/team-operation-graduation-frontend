@@ -1,4 +1,5 @@
 <div class="container">
+<<<<<<< HEAD
     <h1>Create New Project</h1>
     <form [formGroup]="myform" (ngSubmit)="submitForm()">
       <div class="form-group">
@@ -14,4 +15,19 @@
       </div>
     </form>
   </div>
+=======
+  <h1>Create New Project</h1>
+  <form form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Workspace Name:</label>
+      <input type="text" class="form-control" id="title" name="Name" placeholder="Enter workspace name" [(ngModel)]="newWorkspace.name">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" name="description" class="form-control" id="description" placeholder="Enter project description" [(ngModel)]="newWorkspace.description">
+    </div>
+    <button class="btn" type="submit">Create Workspace</button>
+  </form>
+</div>
+>>>>>>> origin/main
   

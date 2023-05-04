@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http'
+=======
+import { FormsModule } from '@angular/forms';
+>>>>>>> origin/main
 
 import { WorkspaceRoutingModule } from './workspace-routing.module';
 import { WorkspaceComponent } from './workspace.component';
@@ -18,9 +22,14 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+<<<<<<< HEAD
     WorkspaceRoutingModule,
     HttpClientModule, 
     FormsModule,
+=======
+    FormsModule,
+    WorkspaceRoutingModule
+>>>>>>> origin/main
   ]
 })
 export class WorkspaceModule { }

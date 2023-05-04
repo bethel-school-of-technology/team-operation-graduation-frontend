@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Workspace } from 'src/app/Models/workspace.model';
+import { WorkspaceService } from 'src/app/services/workspace.service';
 
 @Component({
   selector: 'app-workspace-list',
@@ -6,5 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./workspace-list.component.css']
 })
 export class WorkspaceListComponent {
+  workspaceList: Workspace[] = [];
 
+  constructor(private workspaceService: WorkspaceService) { }
+
+  ngOnInit(): void {
+    this.loadWorkspaces();
+  }
+
+  onDelete(id: string | undefined = '') {
+    this.workspaceService.deleteWorkspaceById(id).subscribe(response => {
+      console.log(response);
+      this.loadWorkspaces();
+    })
+  }
+
+  loadWorkspaces() {
+    this.workspaceService.getAllWorkspaces().subscribe(foundWorkspaces => {
+      console.log(foundWorkspaces);
+      this.workspaceList = foundWorkspaces;
+    })
+  }
 }

@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+=======
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Workspace } from 'src/app/Models/workspace.model';
+import { WorkspaceService } from 'src/app/services/workspace.service';
+>>>>>>> origin/main
 
 @Component({
   selector: 'app-create-workspace',
   templateUrl: './create-workspace.component.html',
   styleUrls: ['./create-workspace.component.css']
 })
+<<<<<<< HEAD
 export class CreateWorkspaceComponent implements OnInit{
 myform: FormGroup;
   form: any;
@@ -20,6 +28,19 @@ constructor(
     title: [''],
     description: ['']
   })
+=======
+export class CreateWorkspaceComponent {
+  newWorkspace: Workspace = new Workspace();
+
+  constructor(private workspaceService: WorkspaceService, private router: Router) { }
+
+  onSubmit() {
+    this.workspaceService.createNewWorkspace(this.newWorkspace).subscribe(response => {
+      console.log(response);
+      this.router.navigate(['']);
+    })
+  }
+>>>>>>> origin/main
 }
 ngOnInit() { }
 submitForm() {
