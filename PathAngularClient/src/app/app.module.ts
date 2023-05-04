@@ -9,6 +9,8 @@ import { WorkspaceModule } from './workspace/workspace.module';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -21,7 +23,12 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     WorkspaceModule,
+<<<<<<< HEAD
+    ReactiveFormsModule,
+    HttpClientModule,
+=======
     HttpClientModule
+>>>>>>> origin/main
   ],
   providers: [],
   bootstrap: [AppComponent]
