@@ -21,10 +21,18 @@ export class TaskDetailsComponent implements OnInit{
 
     this.loadTask();
   }
+
   loadTask() {
     this.taskService.getTaskByTaskId(this.id).subscribe(foundTask => {
       this.currentTask = foundTask;
       console.log(this.currentTask);
     })
+  }
+  
+  markAsComplete() {
+    this.currentTask.completed = true;
+    this.taskService.editTaskById(this.id, this.currentTask).subscribe(response => {
+      console.log(response);
+    });
   }
 }

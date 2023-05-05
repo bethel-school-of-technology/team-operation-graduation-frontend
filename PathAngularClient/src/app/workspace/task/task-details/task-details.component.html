@@ -1,3 +1,5 @@
 <h1>{{currentTask.name}} || {{currentTask.id}}</h1>
 <p>{{currentTask.description}}</p>
+<p>{{currentTask.completed}}</p>
 <a class="btn" href="http://localhost:4200/workspace/{{currentTask.workspaceId}}/{{currentTask.id}}/edit-task">Edit Task Details</a>
+<a class="btn" (click)="markAsComplete()">Complete Task</a>
