@@ -20,14 +20,3 @@ export class CreateWorkspaceComponent {
     })
   }
 }
-// ngOnInit() { }
-// submitForm() {
-//   var formData: any = new FormData();
-//   formData.append("title", this.form.get('title').value);
-//   formData.append("description", this.form.get('description').value);
-//   this.http.post('http://localhost:4200/workspace', formData).subscribe(
-//     (response) => console.log(response),
-//     (error) => console.log(error)
-//   )
-// }
-// }
