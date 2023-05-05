@@ -26,4 +26,8 @@ export class TaskService {
   editTaskById(id: string, edittedTask: Task): Observable<Task> {
     return this.http.put<Task>(this.datasource + '/' + id, edittedTask);
   }
+
+  deleteTaskById(id: string): Observable<any> {
+    return this.http.delete<any>(this.datasource + "/" + id);
+  }
 }

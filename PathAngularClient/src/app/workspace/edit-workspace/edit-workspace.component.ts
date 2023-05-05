@@ -30,4 +30,11 @@ export class EditWorkspaceComponent implements OnInit {
       this.router.navigateByUrl("/workspace");
     })
   }
+
+  deleteWorkspace() {
+    this.workspaceService.deleteWorkspaceById(this.id).subscribe(response => {
+      console.log(response);
+      this.router.navigateByUrl("/workspace");
+    })
+  }
 }

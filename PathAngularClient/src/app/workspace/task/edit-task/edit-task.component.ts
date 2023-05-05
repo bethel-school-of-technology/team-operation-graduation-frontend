@@ -31,4 +31,11 @@ export class EditTaskComponent implements OnInit{
       this.router.navigateByUrl("workspace");
     })
   }
+
+  deleteTask() {
+    this.taskService.deleteTaskById(this.id).subscribe(response => {
+      console.log(response);
+      this.router.navigateByUrl("workspace");
+    });
+  } 
 }
