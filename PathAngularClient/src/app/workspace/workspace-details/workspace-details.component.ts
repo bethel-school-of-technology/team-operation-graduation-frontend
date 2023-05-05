@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Workspace } from 'src/app/Models/workspace.model';
+import { Workspace } from 'src/app/models/workspace.model';
 import { WorkspaceService } from 'src/app/services/workspace.service';
 
 @Component({

@@ -1,4 +1,4 @@
-import { Workspace } from './workspace.model';
+import { Workspace } from "./workspace.model";
 
 describe('Workspace', () => {
   it('should create an instance', () => {

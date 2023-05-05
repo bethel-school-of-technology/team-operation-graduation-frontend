@@ -5,6 +5,10 @@ import { EditWorkspaceComponent } from './edit-workspace/edit-workspace.componen
 import { WorkspaceDetailsComponent } from './workspace-details/workspace-details.component';
 import { WorkspaceListComponent } from './workspace-list/workspace-list.component';
 import { WorkspaceComponent } from './workspace.component';
+import { TaskListComponent } from './task/task-list/task-list.component';
+import { CreateTaskComponent } from './task/create-task/create-task.component';
+import { TaskDetailsComponent } from './task/task-details/task-details.component';
+import { EditTaskComponent } from './task/edit-task/edit-task.component';
 
 const routes: Routes = [
   {
@@ -21,16 +25,32 @@ const routes: Routes = [
         component: WorkspaceListComponent
       },
       {
+        path: 'details/:workspaceId',
+        component: WorkspaceDetailsComponent
+      },
+      {
+        path: 'edit/:workspaceId',
+        component: EditWorkspaceComponent
+      },
+      {
         path: 'create',
         component: CreateWorkspaceComponent
       },
       {
-        path:'list/:workspaceId',
-        component: WorkspaceDetailsComponent
+        path: ':workspaceId/task-list',
+        component: TaskListComponent
       },
       {
-        path: 'list/edit/:workspaceId',
-        component: EditWorkspaceComponent
+        path: ':workspaceId/create-task',
+        component: CreateTaskComponent
+      },
+      {
+        path: ':workspaceId/:taskId/edit-task',
+        component: EditTaskComponent
+      },
+      {
+        path: ':workspaceId/:taskId/task-details',
+        component: TaskDetailsComponent
       }
     ]
   }

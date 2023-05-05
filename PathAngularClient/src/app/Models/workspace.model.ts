@@ -1,10 +1,4 @@
 export class Workspace {
-<<<<<<< HEAD
-    id: number;
-    title: string;
-    discription: string;
-
-=======
     id?: string = '';
     name?: string = '';
     description?: string = '';
@@ -16,5 +10,4 @@ export class Workspace {
         this.description = description;
         this.goals = goals;
     }
->>>>>>> origin/main
 }
