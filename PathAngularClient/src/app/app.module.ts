@@ -9,6 +9,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
@@ -22,8 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     AppRoutingModule,
     FormsModule,
     WorkspaceModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
