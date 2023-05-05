@@ -1,1 +1,10 @@
 <h1>{{currentWorkspace.name}} || {{currentWorkspace.id}}</h1>
+<h2>Tasks:</h2>
+<div *ngFor="let task of taskList">
+    <p>{{task.name}}</p>
+    <p>{{task.description}}</p>
+</div>
+<a class="btn" href="http://localhost:4200/workspace/edit/{{currentWorkspace.id}}">Edit Workspace Details</a>
+<br>
+<a class="btn" href="http://localhost:4200/workspace/{{currentWorkspace.id}}/task-list">View Task List</a>
+

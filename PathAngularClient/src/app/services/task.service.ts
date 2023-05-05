@@ -10,6 +10,10 @@ export class TaskService {
   datasource: string = "http://localhost:5012/api/task";
 
   constructor(private http: HttpClient) { }
+
+  getTaskByTaskId(id: string): Observable<Task> {
+    return this.http.get<Task>(this.datasource + '/' + id);
+  }
   
   getTasksByWorkspaceId(workspaceId: string): Observable<Task[]> {
     return this.http.get<Task[]>(this.datasource + '/WS/' + workspaceId);
@@ -17,5 +21,9 @@ export class TaskService {
 
   createNewTask(newTask: Task, workspaceId: string): Observable<Task> {
     return this.http.post<Task>(this.datasource + '?workspaceId=' + workspaceId, newTask);
+  }
+
+  editTaskById(id: string, edittedTask: Task): Observable<Task> {
+    return this.http.put<Task>(this.datasource + '/' + id, edittedTask);
   }
 }

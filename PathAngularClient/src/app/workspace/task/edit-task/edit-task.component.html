@@ -1,1 +1,12 @@
-<p>edit-task works!</p>
+<form form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <label>Task Name</label>
+        <input type="text" name="name" [(ngModel)]="currentTask.name">
+    </div>
+    <div class="container">
+        <label>Task Description</label>
+        <input type="text" name="description" [(ngModel)]="currentTask.description">
+    </div>
+
+    <button class="center" type="submit">Update Task</button>
+</form>

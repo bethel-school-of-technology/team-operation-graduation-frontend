@@ -10,6 +10,7 @@ import { WorkspaceComponent } from './workspace.component';
 import { WorkspaceListComponent } from './workspace-list/workspace-list.component';
 import { CreateWorkspaceComponent } from './create-workspace/create-workspace/create-workspace.component';
 import { EditWorkspaceComponent } from './edit-workspace/edit-workspace.component';
+import { WorkspaceDetailsComponent } from './workspace-details/workspace-details.component';
 
 import { TaskListComponent } from './task/task-list/task-list.component';
 import { CreateTaskComponent } from './task/create-task/create-task.component';
@@ -23,7 +24,8 @@ import { EditTaskComponent } from './task/edit-task/edit-task.component';
     EditWorkspaceComponent,
     TaskListComponent,
     CreateTaskComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    WorkspaceDetailsComponent
   ],
   imports: [
     CommonModule,

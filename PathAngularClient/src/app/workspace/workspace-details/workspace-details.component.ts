@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { Workspace } from 'src/app/models/workspace.model';
 import { WorkspaceService } from 'src/app/services/workspace.service';
+
+import { Task } from 'src/app/models/task.model';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-workspace-details',
@@ -12,15 +16,29 @@ export class WorkspaceDetailsComponent implements OnInit {
   id: string = "";
 
   currentWorkspace: Workspace = new Workspace();
+  taskList: Task[] = [];
 
-  constructor(private workspaceService: WorkspaceService, private actRoute: ActivatedRoute) { }
+  constructor(private workspaceService: WorkspaceService, private taskService: TaskService, private actRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     const routeId = this.actRoute.snapshot.paramMap.get("workspaceId") ?? "";
     this.id = routeId;
+    
+    this.loadWorkspace();
+    this.loadTasks();
+  }
+
+  loadTasks() {
+    this.taskService.getTasksByWorkspaceId(this.id).subscribe(foundTasks => {
+      this.taskList = foundTasks;
+      console.log(this.taskList);
+    })
+  }
+
+  loadWorkspace() {
     this.workspaceService.getWorkspaceById(this.id).subscribe(foundWorkspace => {
-      console.log(foundWorkspace);
       this.currentWorkspace = foundWorkspace;
+      console.log(this.currentWorkspace);
     })
   }
 }

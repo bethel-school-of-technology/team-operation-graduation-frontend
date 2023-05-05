@@ -19,9 +19,14 @@ export class TaskListComponent implements OnInit {
     const routeId = this.actRoute.snapshot.paramMap.get("workspaceId") ?? "";
     this.id = routeId;
     console.log(routeId)
+    
+    this.loadTasks();
+  }
+
+  loadTasks() {
     this.taskService.getTasksByWorkspaceId(this.id).subscribe(foundTasks => {
-      console.log(foundTasks);
-      this.taskList = foundTasks
+      this.taskList = foundTasks;
+      console.log(this.taskList)
     })
   }
 }
