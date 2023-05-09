@@ -1,9 +1,16 @@
+
 body {
-  background-color: #6D6E80;
+  background-color: #C3D6D2;
+}
+.navbar {
+  background-color: #508A7B;
+}
+.navbar-toggler{
+  background-color: #F5F5F5;
 }
 
 .btn {
-  background-color: #E9DCC9;
+  background-color: #D59065;
   color: white;
 }
 
