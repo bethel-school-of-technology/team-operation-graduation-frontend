@@ -1,9 +1,29 @@
 <body class="p-3 m-0 border-0 bd-example">
-  <div class="content">
-    <div class="container">
+  <div class="container">
+    <div class="heading">
       <h1>Project List</h1>
     </div>
   </div>
+  <div class="container">
+    <div class="center">
+      <a class="btn" href="http://localhost:4200/workspace/create">New Workspace</a>
+    </div>
+  </div>
+  <div class="alert">
+		<div class="mx-auto">
+			<div class="alert alert-warning shadow my-3" role="alert" style="border-radius: 3px">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="True" style="color:#856404">&times;</span>
+				</button>
+				<div class="text-center">
+					<svg width="3em" height="3em" viewBox="0 0 16 16"  class="m-1 bi bi-cone-striped" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.97 4.88l.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
+					</svg>
+				</div>
+				<p style="font-size:18px" class="text-center"><b class="mr-1">Ops:</b>Looks like you don't have any workspaces yet.</p>
+			</div>
+		</div>
+	</div>
   <!-- Content Area -->
   <div *ngFor="let workspace of workspaceList">
     <div class="row">
@@ -18,5 +38,5 @@
       </div>
     </div>
   </div>
-  <a class="btn" href="http://localhost:4200/workspace/create">New Workspace</a>
+  
 </body>
