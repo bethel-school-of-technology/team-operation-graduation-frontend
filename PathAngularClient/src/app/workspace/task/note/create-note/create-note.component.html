@@ -1,0 +1,9 @@
+<app-create-note>
+  <form form="ngForm"(ngSubmit)="createNote()">
+    <div class="form-group">
+      <label for="note">New Note:</label>
+      <input type="text" class="form-control" name="note" [(ngModel)]="note">
+    </div>
+    <button class="btn" type="submit">Add Note</button>
+  </form>
+</app-create-note>

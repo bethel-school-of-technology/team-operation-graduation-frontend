@@ -12,9 +12,7 @@ import { CreateWorkspaceComponent } from './create-workspace/create-workspace/cr
 import { EditWorkspaceComponent } from './edit-workspace/edit-workspace.component';
 import { WorkspaceDetailsComponent } from './workspace-details/workspace-details.component';
 
-import { TaskListComponent } from './task/task-list/task-list.component';
-import { CreateTaskComponent } from './task/create-task/create-task.component';
-import { EditTaskComponent } from './task/edit-task/edit-task.component';
+import { TaskModule } from './task/task.module';
 
 @NgModule({
   declarations: [
@@ -22,17 +20,15 @@ import { EditTaskComponent } from './task/edit-task/edit-task.component';
     CreateWorkspaceComponent,
     WorkspaceListComponent,
     EditWorkspaceComponent,
-    TaskListComponent,
-    CreateTaskComponent,
-    EditTaskComponent,
-    WorkspaceDetailsComponent
+    WorkspaceDetailsComponent,
   ],
   imports: [
     CommonModule,
     WorkspaceRoutingModule,
     HttpClientModule, 
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    TaskModule
   ]
 })
 export class WorkspaceModule { }
