@@ -9,6 +9,7 @@ import { WorkspaceService } from 'src/app/services/workspace.service';
 })
 export class WorkspaceListComponent {
   workspaceList: Workspace[] = [];
+  listEmpty: boolean = false;
 
   constructor(private workspaceService: WorkspaceService) { }
 
@@ -27,6 +28,11 @@ export class WorkspaceListComponent {
     this.workspaceService.getAllWorkspaces().subscribe(foundWorkspaces => {
       console.log(foundWorkspaces);
       this.workspaceList = foundWorkspaces;
+
+      if(this.workspaceList.length == 0)
+      {
+        this.listEmpty = true;
+      }
     })
   }
 }
