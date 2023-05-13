@@ -34,10 +34,12 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container"> 
+    
   <div *ngFor="let workspace of workspaceList">
     <div class="row">
       <div class="col-sm-6 mb-4">
+        <div class="card-column">
         <div class="card">
           <div class="card-header d-flex justify-content-around"> <h4>{{workspace.name}}</h4>
             <div>
@@ -53,8 +55,9 @@
             <p class="card-text text-wrapping">{{workspace.description}}</p>
           </div>
         </div>
+       </div>
+      </div>
       </div>
     </div>
   </div>
-</div>
 </body>
