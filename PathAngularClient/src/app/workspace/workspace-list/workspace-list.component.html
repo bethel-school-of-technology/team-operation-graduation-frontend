@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <!-- Alert needs to be edited to only be seen when there are no projects -->
+  <!-- Alert  -->
   <div *ngIf="listEmpty" class="alert">
     <div class="mx-auto">
       <div class="alert alert-warning shadow my-3" role="alert" style="border-radius: 3px">
@@ -28,33 +28,33 @@
               d="M9.97 4.88l.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z" />
           </svg>
         </div>
-        <p style="font-size:18px" class="text-center"><b class="mr-1">Oops:</b>Looks like you don't have any workspaces
+        <p style="font-size:18px" class="text-center"><b class="mr-1">Oops:</b>Looks like you don't have any workspace
           yet.</p>
       </div>
     </div>
   </div>
 
+  <div class="container">
   <div *ngFor="let workspace of workspaceList">
     <div class="row">
-      <div class="col-md-6 mb-4">
+      <div class="col-sm-6 mb-4">
         <div class="card">
-
-          <h4 class="card-header">{{workspace.name}}
-            <a class="btn" id="openWorkspacetbtn" href="http://localhost:4200/workspace/details/{{workspace.id}}"> <svg
-                xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder2-open"
-                viewBox="0 0 16 16">
-                <path
-                  d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14V3.5zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5V6zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7H1.633z" />
-              </svg> Open Workspace</a>
-          </h4>
-
+          <div class="card-header d-flex justify-content-around"> <h4>{{workspace.name}}</h4>
+            <div>
+              <a class="btn" id="openWorkspacetbtn" href="http://localhost:4200/workspace/details/{{workspace.id}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-folder2-open" viewBox="0 0 16 16">
+                  <path
+                    d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14V3.5zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5V6zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7H1.633z" />
+                </svg> Open Workspace</a>
+            </div>
+          </div>
           <div class="card-body">
-            <p class="card-text">{{workspace.description}}</p>
-
+            <p class="card-text text-wrapping">{{workspace.description}}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+</div>
 </body>

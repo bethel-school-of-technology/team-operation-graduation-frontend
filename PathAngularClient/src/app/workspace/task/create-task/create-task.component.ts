@@ -26,6 +26,14 @@ export class CreateTaskComponent {
   onSubmit() {
     this.workspaceId = this.actRoute.snapshot.paramMap.get("workspaceId") ?? "";
     this.newTask.workspaceId = this.workspaceId;
+    if (!this.newTask.name) {
+      alert('fill out name');
+      return;
+    }
+    if (!this.newTask.description) {
+      alert('fill out description');
+      return;
+    }
     this.taskService.createNewTask(this.newTask, this.workspaceId).subscribe(response => {
       console.log(response);
       this.router.navigate([''])
