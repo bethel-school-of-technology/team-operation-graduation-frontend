@@ -1,0 +1,25 @@
+#title{
+   
+    justify-content: center;
+    margin-top: 20px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    height:fit-content;
+}
+
+
+
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+
+  #newFormCard{
+    background-color:#F5F5F5;
+  }
+
+  #description{
+    margin-top: 10px;
+  }
