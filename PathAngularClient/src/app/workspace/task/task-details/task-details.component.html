@@ -1,19 +1,8 @@
 <h1>{{currentTask.name}}</h1>
 <p>{{currentTask.description}}</p>
 <p>{{currentTask.completed}}</p>
-<p>{{currentTask.notes}}</p>
 
 <a class="btn" href="http://localhost:4200/workspace/{{currentTask.workspaceId}}/{{currentTask.id}}/edit">Edit Task</a>
-<a class="btn" (click)="markAsComplete()">Complete Task</a>
-
-<h2>Notes</h2>
-<div *ngFor="let note of currentTask.notes">
-    <li>{{note}}</li>
+<div *ngIf="currentTask.completed == false">
+    <a class="btn" (click)="markAsComplete()">Complete Task</a>
 </div>
-
-<form form="ngForm" (ngSubmit)="createNote()">
-    <div class="form-group">
-        <input type="text" class="form-control" name="note" [(ngModel)]="newNote">
-    </div>
-    <button class="btn" type="submit">Add Note</button>
-</form>

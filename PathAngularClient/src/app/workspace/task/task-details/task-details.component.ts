@@ -12,9 +12,6 @@ export class TaskDetailsComponent implements OnInit{
   id: string = "";
   currentTask: Task = new Task();
   
-  noteList: string[] = [];
-  newNote: string = '';
-
   constructor(private taskService: TaskService, private actRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -36,9 +33,5 @@ export class TaskDetailsComponent implements OnInit{
     this.taskService.editTaskById(this.id, this.currentTask).subscribe(response => {
       console.log(response);
     });
-  }
-
-  createNote() {
-
   }
 }
