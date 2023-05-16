@@ -10,6 +10,8 @@ import { Task } from 'src/app/models/task.model';
 })
 export class TaskListComponent implements OnInit {
   taskList: Task[] = [];
+  completeTasks: Task[] = [];
+  incompleteTasks: Task[] = [];
   
   id: string = "";
 
@@ -19,14 +21,23 @@ export class TaskListComponent implements OnInit {
     const routeId = this.actRoute.snapshot.paramMap.get("workspaceId") ?? "";
     this.id = routeId;
     console.log(routeId)
-    
     this.loadTasks();
   }
 
   loadTasks() {
     this.taskService.getTasksByWorkspaceId(this.id).subscribe(foundTasks => {
       this.taskList = foundTasks;
-      console.log(this.taskList)
+      for(let task of this.taskList)
+      {
+        if(task.completed == false) 
+        {
+          this.incompleteTasks.push(task);
+        }
+        if(task.completed == true) 
+        {
+          this.completeTasks.push(task);
+        }
+      }
     })
   }
 }

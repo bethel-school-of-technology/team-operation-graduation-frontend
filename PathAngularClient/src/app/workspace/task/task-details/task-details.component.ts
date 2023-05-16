@@ -11,6 +11,9 @@ import { TaskService } from 'src/app/services/task.service';
 export class TaskDetailsComponent implements OnInit{
   id: string = "";
   currentTask: Task = new Task();
+  
+  noteList: string[] = [];
+  newNote: string = '';
 
   constructor(private taskService: TaskService, private actRoute: ActivatedRoute) { }
 
@@ -33,5 +36,9 @@ export class TaskDetailsComponent implements OnInit{
     this.taskService.editTaskById(this.id, this.currentTask).subscribe(response => {
       console.log(response);
     });
+  }
+
+  createNote() {
+
   }
 }

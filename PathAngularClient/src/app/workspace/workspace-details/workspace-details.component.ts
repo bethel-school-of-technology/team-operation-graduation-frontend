@@ -17,6 +17,7 @@ export class WorkspaceDetailsComponent implements OnInit {
 
   currentWorkspace: Workspace = new Workspace();
   taskList: Task[] = [];
+  toDo: Task[] = [];
 
   constructor(private workspaceService: WorkspaceService, private taskService: TaskService, private actRoute: ActivatedRoute) { }
 
@@ -32,6 +33,12 @@ export class WorkspaceDetailsComponent implements OnInit {
     this.taskService.getTasksByWorkspaceId(this.id).subscribe(foundTasks => {
       this.taskList = foundTasks;
       console.log(this.taskList);
+      for(let task of this.taskList) {
+        if(task.completed == false)
+        {
+          this.toDo.push(task);
+        }
+      }
     })
   }
 

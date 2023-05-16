@@ -1,15 +1,30 @@
 <h2>Task Board</h2>
-    <div *ngFor="let task of taskList">
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>
-                    {{task.name}}
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                {{task.description}}
-            </mat-card-content>
-            <a class="btn" href="http://localhost:4200/workspace/{{id}}/{{task.id}}">Task Details</a>
-        </mat-card>
-    </div>
-    <a class="btn" href="http://localhost:4200/workspace/{{id}}/create">New Task</a>
+<h3>To Do</h3>
+<div *ngFor="let task of incompleteTasks">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{task.name}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            {{task.description}}
+        </mat-card-content>
+        <a class="btn" href="http://localhost:4200/workspace/{{id}}/{{task.id}}/details">Task Details</a>
+    </mat-card>
+</div>
+<h3>Completed</h3>
+<div *ngFor="let task of completeTasks">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{task.name}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            {{task.description}}
+        </mat-card-content>
+        <a class="btn" href="http://localhost:4200/workspace/{{id}}/{{task.id}}/details">Task Details</a>
+    </mat-card>
+</div>
+<a class="btn" href="http://localhost:4200/workspace/{{id}}/create">New Task</a>

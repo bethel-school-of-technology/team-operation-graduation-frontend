@@ -27,10 +27,6 @@ const routes: Routes = [
     path: ':taskId/details',
     component: TaskDetailsComponent
   },
-  {
-    path: ':taskId',
-    loadChildren: () => import('./note/note.module').then(m => m.NoteModule)
-  }
 ];
 
 @NgModule({
