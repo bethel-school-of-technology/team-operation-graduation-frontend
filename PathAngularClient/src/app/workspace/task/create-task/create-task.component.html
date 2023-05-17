@@ -1,16 +1,42 @@
-<div class="container">
+<div class="heading">
   <h1>Create New Task</h1>
-  <form form="ngForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="title">Task Name:</label>
-      <input type="text" class="form-control" id="title" name="Name" placeholder="Enter task name" [(ngModel)]="newTask.name">
-    </div>
-    <div class="form-group">
-      <label for="description">Description:</label>
-      <input type="text" name="description" class="form-control" id="description" placeholder="Enter task description" [(ngModel)]="newTask.description">
-    </div>
-    <button class="btn" type="submit">Create Task</button>
-  </form>
+  </div>
+ <div class="container">
+ 
+  <div class="col-sm-8 ">
+      <div class="card " id="taskCard">
+          <div class="card-body">
+              <div class="card-text">
+                  <div class="form">
+                      <div class="form-group">
+                          <form form="ngForm" (ngSubmit)="onSubmit()">
+                              <div id="taskNameDiv">
+                                  <label>
+                                      <h5>Task Name</h5>
+                                  </label>
+                                  <input type="text" class="form-control" id="title" name="Name" placeholder="Enter Task Name" 
+                                  [(ngModel)]="newTask.name">
+                              </div>
+                              <div id="taskDescriptionDiv">
+                                  <label>
+                                      <h5>Task Description</h5>
+                                  </label>
+                                  <textarea rows="2" style="resize: none;" type="text" name="description" placeholder="Enter Description"
+                                      class="form-control" [(ngModel)]="newTask.description">
+                                  </textarea>
+                              </div>
+                              <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                      fill="currentColor" class="bi bi-file-earmark-arrow-up" viewBox="0 0 16 16">
+                                      <path
+                                          d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z" />
+                                      <path
+                                          d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                                  </svg> Create Task</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-    
-  
