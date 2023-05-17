@@ -1,8 +1,18 @@
-<h1>{{currentTask.name}}</h1>
-<p>{{currentTask.description}}</p>
-<p>{{currentTask.completed}}</p>
+<div class="container">
+<div >
+    <div class="card">
+        <div class="card-header">
+            <h1>{{currentTask.name}}</h1>
+        </div>
+        <div class="card-body text-center">
+        <p>{{currentTask.description}}</p>
+       
+       <p> {{currentTask.completed}}</p>
 
-<a class="btn" href="http://localhost:4200/workspace/{{currentTask.workspaceId}}/{{currentTask.id}}/edit">Edit Task</a>
-<div *ngIf="currentTask.completed == false">
-    <a class="btn" (click)="markAsComplete()">Complete Task</a>
+        <a class="btn" href="http://localhost:4200/workspace/{{currentTask.workspaceId}}/{{currentTask.id}}/edit">Edit Task</a>
+        <p></p>
+        <a *ngIf="currentTask.completed == false" class="btn" (click)="markAsComplete()">Complete Task</a>
+        </div>
+    </div>
+    </div>
 </div>

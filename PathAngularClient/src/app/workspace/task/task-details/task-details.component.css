@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height:fit-content;
+}
+.card{
+display: flex;
+justify-content: center;
+
+}

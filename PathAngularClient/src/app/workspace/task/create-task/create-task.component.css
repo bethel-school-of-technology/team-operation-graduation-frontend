@@ -1,3 +1,8 @@
+.heading{
+   
+    justify-content: center;
+    margin-top: 20px;
+}
 #editing{
     margin: 20px;
 }
