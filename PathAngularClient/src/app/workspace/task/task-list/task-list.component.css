@@ -1,0 +1,15 @@
+.containter{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    
+
+}
+.card{
+    display: inline-flex;
+}
+#completedTitle, #todoTitle{
+    margin-left: 50px;
+}
