@@ -3,7 +3,7 @@
     justify-content: center;
     margin-top: 20px;
 }
-.container {
+.container-fluid{
     display: flex;
     justify-content: center;
     height:fit-content;
