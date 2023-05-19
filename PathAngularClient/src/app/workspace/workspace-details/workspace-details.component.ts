@@ -33,6 +33,7 @@ export class WorkspaceDetailsComponent implements OnInit {
     this.taskService.getTasksByWorkspaceId(this.id).subscribe(foundTasks => {
       this.taskList = foundTasks;
       console.log(this.taskList);
+      this.toDo = [];
       for(let task of this.taskList) {
         if(task.completed == false)
         {
@@ -40,6 +41,16 @@ export class WorkspaceDetailsComponent implements OnInit {
         }
       }
     })
+  }
+
+  public completeTask(task: Task) {
+    if (task.id != undefined) {
+      task.completed = true;
+      this.taskService.editTaskById(task.id, task).subscribe(edittedTask => {
+        this.loadTasks();
+      })
+    }
+
   }
 
   loadWorkspace() {

@@ -13,6 +13,7 @@ import { EditWorkspaceComponent } from './edit-workspace/edit-workspace.componen
 import { WorkspaceDetailsComponent } from './workspace-details/workspace-details.component';
 
 import { TaskModule } from './task/task.module';
+import { CreateTaskComponent } from './task/create-task/create-task.component';
 
 @NgModule({
   declarations: [

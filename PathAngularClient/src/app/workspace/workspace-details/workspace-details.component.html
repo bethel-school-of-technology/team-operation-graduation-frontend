@@ -35,6 +35,10 @@
                               type="checkbox"
                               value=""
                               id="flexCheckDefault"
+                            
+                              (change)="completeTask(task)"
+
+                            
                             />
                             <label class="form-check-label card-title" for="flexCheckDefault" id="checkboxTitle">
                                 <h5>{{task.name}}</h5>
@@ -42,9 +46,10 @@
                             </label>
                           </div>
                        
-                
                     </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- <app-create-task></app-create-task> -->
