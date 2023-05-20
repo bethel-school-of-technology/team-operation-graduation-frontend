@@ -27,7 +27,7 @@ export class CreateTaskComponent {
     }
     this.taskService.createNewTask(this.newTask, this.workspaceId).subscribe(response => {
       console.log(response);
-      this.router.navigate(['workspace/' + this.workspaceId + '/task'])
+      this.router.navigate(['workspace/details/' + this.workspaceId])
     })
   }
 

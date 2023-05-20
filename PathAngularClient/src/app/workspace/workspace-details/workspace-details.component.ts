@@ -14,8 +14,8 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class WorkspaceDetailsComponent implements OnInit {
   id: string = "";
-
   currentWorkspace: Workspace = new Workspace();
+
   taskList: Task[] = [];
   toDo: Task[] = [];
 
@@ -40,6 +40,13 @@ export class WorkspaceDetailsComponent implements OnInit {
         }
       }
     })
+  }
+
+  markComplete(task: Task) {
+    if(task.id != undefined) {
+      task.completed = true;
+      this.taskService.editTaskById(task.id, task)
+    }
   }
 
   loadWorkspace() {

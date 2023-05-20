@@ -24,6 +24,9 @@ import { TaskDetailsComponent } from './task-details/task-details.component';
     TaskRoutingModule,
     MatCardModule,
     FormsModule,
+  ],
+  exports: [
+    CreateTaskComponent,
   ]
 })
 export class TaskModule { }
